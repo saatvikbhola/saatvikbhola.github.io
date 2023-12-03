@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+	<link rel="stylesheet" href="project.css">	
+    <link rel="stylesheet" href="product.css">
+	<link rel="stylesheet" href="shop.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&display=swap" rel="stylesheet">
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const filterCheckboxes = document.querySelectorAll('.filter-checkbox');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const searchInput = document.querySelector('.search-box');
+    
+            filterCheckboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', filterGallery);
+            });
+    
+            searchInput.addEventListener('input', filterGallery);
+    
+            function filterGallery() {
+                const selectedCategories = Array.from(filterCheckboxes)
+                    .filter(checkbox => checkbox.checked)
+                    .map(checkbox => checkbox.dataset.filter);
+    
+                const searchTerm = searchInput.value.toLowerCase().trim();
+    
+                galleryItems.forEach(item => {
+                    const hasCategory = selectedCategories.length === 0 || selectedCategories.some(category => item.classList.contains(category));
+                    const hasSearchTerm = searchTerm === '' || item.textContent.toLowerCase().includes(searchTerm);
+    
+                    if (hasCategory && hasSearchTerm) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
+    
+</head>
+
+<body>
+    
+    <header>
+        <div class="header-left">
+            <a href="index.html" class="header-link"><b>NewGen Laptops</b></a>
+            <a href="#" class="header-link">About Us</a>
+            <a href="shop.html" class="header-link">Shop</a>
+            <a href="#" class="header-link">Contact Us</a>
+            <a href="#" class="header-link">Orders</a>
+        </div>
+        <div class="header-right">
+            <img src="search.png" class="image-icon">
+            <input type="text" class="search-box" placeholder="Search">
+            <span style="margin-right: 10px;"></span>
+            <img src="shopping.png" class="image-icon">
+            <div class="quantity">3</div>
+        </div>
+    </header>
+
+    <br>
+	<div class="titlebox">
+		<div class="title2">
+			Shop
+		</div>
+		<div class="detl">
+			Purchase the latest, newest and the greatest gaming 
+			gear available.
+		</div>
+	</div>
+
+    <br>
+    <br>
+	
+    <div class="sidebar">
+        <label><input type="checkbox" class="filter-checkbox" data-filter="laptop"> 
+            <div class="lbl">
+                Laptop
+            </div>    
+        </label>
+        <br>
+        <label><input type="checkbox" class="filter-checkbox" data-filter="storage">
+            <div class="lbl">
+                Storage
+            </div>    
+        </label>
+        <br>
+        <label><input type="checkbox" class="filter-checkbox" data-filter="headphones">
+            <div class="lbl">
+                Headphones
+            </div>
+        </label>
+        <br>
+        <label><input type="checkbox" class="filter-checkbox" data-filter="mouse">
+            <div class="lbl"> 
+                Mouse
+            </div>
+        </label>
+    </div>
+
+    <div class="gallery-container">
+        <div class="gallery-item laptop">
+            <div class="card">
+                <div class="card2">
+                    <a href="product.html" class="card-link">
+                        <div class="pimage">
+                            <img src="product3.png">
+                        </div>
+                        <div class="pprice">
+                            <p class="1">Acer Predator Helios Neo 16</p>
+                            <p>₹ 2,21,999</p>
+                        </div>
+                    </a>        
+                </div>
+            </div>
+        </div>
+        <div class="gallery-item laptop">
+            <div class="card">
+                <div class="card2">
+                    <a href="product.html" class="card-link">
+                        <div class="pimage">
+                            <img src="product11.png">
+                        </div>
+                        <div class="pprice">
+                            <p class="1">Alienware X16</p>
+                            <p>₹ 3,52,980</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="gallery-item storage">
+            <div class="card">
+                <div class="card2">
+                    <a href="product.html" class="card-link">
+                        <div class="pimage">
+                            <img src="ssd_product.png">
+                        </div>
+                        <div class="pprice">
+                            <p class="1">Corsair MP700 PRO 2TB PCIe Gen5 x4 NVMe 2.0 M.2 SSD</p>
+                            <p>₹ 25,304</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="gallery-item storage">
+            <div class="card">
+                <div class="card2">
+                    <a href="product.html" class="card-link">
+                        <div class="pimage">
+                            <img src="ssd_product1.png">
+                        </div>
+                        <div class="pprice">
+                            <p class="1">Corsair EX100U 4TB Portable Solid State Drive</p>
+                            <p>₹ 30,304</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="gallery-item mouse">
+            <div class="card">
+                <div class="card2">
+                    <a href="product.html" class="card-link">
+                        <div class="pimage">
+                            <img src="mouse_prod1.png">
+                        </div>
+                        <div class="pprice">
+                            <p class="1">Razer Naga V2 HyperSpeedE</p>
+                            <p>₹ 8,259</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="gallery-item laptop">
+            <div class="card">
+                <div class="card2">
+                    <a href="product.html" class="card-link">
+                        <div class="pimage">
+                            <img src="product22.png">
+                        </div>
+                        <div class="pprice">
+                            <p class="1">Legion pro 7i 13th gen</p>
+                            <p>₹ 2,73,590</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="gallery-item headphones">
+            <div class="card">
+                <div class="card2"><a href="product.html" class="card-link">
+                    <div class="pimage">
+                        <img src="head_product1.png">
+                    </div>
+                    <div class="pprice">
+                        <p class="1">Razer kaira Pro HyperSpeed</p>
+                        <p>₹ 16,999</p>
+                    </div>
+                </a></div>
+            </div>
+        </div>
+        <div class="gallery-item laptop">
+            <div class="card">
+                <div class="card2">
+                    <a href="product.html" class="card-link">
+                        <div class="pimage">
+                            <img src="product33.png">
+                        </div>
+                        <div class="pprice">
+                            <p class="1">MSI Titan G77 HX 13V</p>
+                            <p>₹ 4,91,580</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="gallery-item mouse">
+            <div class="card">
+                <div class="card2">
+                    <a href="product.html" class="card-link">
+                        <div class="pimage">
+                            <img src="mouse_prod.png">
+                        </div>
+                        <div class="pprice">
+                            <p class="1">CLUTCH GM20 ELITE</p>
+                            <p>₹ 3,199</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <hr class="gray-line">
+    <br>
+    <br>
+
+    <div class="container">
+        <div class="box-dv1">
+          <h1>Sign up for our Newsletter</h1>
+          <p>Be the first to know about our special offers, news, and updates.</p>
+          <div class="input-container">
+            <input type="text" placeholder="Email Address">
+            <button>Submit</button>
+          </div>
+        </div>
+    
+        <div class="box-dv2">
+            <h2>Products</h2>
+            <p>Features</p>
+            <p>Pricing</p>
+            <p>Case studies</p>
+            <p>Reviews</p>
+            <p>Updates</p>
+        </div>
+    
+        <div class="box-dv2">
+          <h2>Company</h2>
+            <p>About us</p>
+            <p>Contact us</p>
+            <p>Careers</p>
+            <p>Culture</p>
+            <p>Blog</p>
+        </div>
+
+        <div class="box-dv2">
+            <h2>Contact</h2>
+            <p>Chat support</p>
+            <p>Help center</p>
+            <p>Server status</p>
+            <p>Report a bug</p>
+            <p>About us</p>
+          </div>
+    </div>
+
+    <footer>
+        &copy; Copyrights site.com. All Rights Reserved
+    </footer>
+</body>
+</html>

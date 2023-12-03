@@ -1,0 +1,172 @@
+.title,
+.title1 {
+    font-size: 35px;
+    font-family: 'M PLUS 1 Code', monospace;
+    background: linear-gradient(90deg, rgba(221, 13, 255, 1) 0%, rgba(28, 24, 221, 0.69) 50%, rgba(0, 179, 93, 1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .title1 {
+    margin-left: 125px;
+    font-weight: bold;
+  }
+  
+  .detail {
+    font-family: 'M PLUS 1 Code', monospace;
+    font-size: 18px;
+    color: beige;
+    margin-top: 15px;
+    width: 88%;
+  }
+
+  .mnfc {
+    font-family: 'M PLUS 1 Code', monospace;
+    font-size: 18px;
+    color: beige;
+    margin-top: 10px;
+  }
+
+  .mnfc span {
+    font-family: 'M PLUS 1 Code', monospace;
+    font-size: 22px;
+    color: green;
+    margin-top: 15px;
+  }
+
+  .price {
+    font-family: 'M PLUS 1 Code', monospace;
+    font-size: 25px;
+    color: beige;
+    margin-top: 30px;
+  }
+
+  .grd-cart {
+    margin-top: 15px;
+    display: flex;
+    gap: 5px;
+  }
+  
+  .cart,
+  .number-control {
+    border: 1px solid #BB0CEA;
+    text-align: center;
+    height: 50px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .cart {
+    width: 300px; 
+  }
+  
+  .number-control {
+    width: 200px; 
+  }
+  
+  .cart button,
+  .number-control button {
+    font-size: 16px;
+    background-color: transparent;
+    color: beige;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    flex: 1;
+  }
+
+  .cart button{
+    transition: background-color 1s, color 1s, ease-in;
+  }
+
+  .cart button.added-to-cart {
+    background-color: #8F22A1;
+    color: beige;
+    height: 50px;
+  }
+
+  .number-control button{
+    font-size: 50px;
+  }
+
+  .number-control input{
+    font-size: 18px;
+    font-family: 'M PLUS 1 Code', monospace;
+    color: #BB0CEA;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+  }
+  
+  .number-control {
+    display: flex;
+    align-items: center;
+  }
+  
+    
+
+  .number-left::before,
+  .number-right::after {
+    content: attr(data-content);
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    color: white;
+    transition: background-color 0.3s;
+    cursor: pointer;
+  }
+  
+  .number-left::before {
+    content: "-";
+  }
+  
+  .number-right::after {
+    content: "+";
+  }
+  
+  .number-quantity {
+    padding: 0.25rem;
+    border: 0;
+    width: 92px;
+    height: 40px;
+    -moz-appearance: textfield;
+    border-top: 1px solid wheat;
+    border-bottom: 1px solid wheat;
+  }
+  
+  .number-left:hover::before,
+  .number-right:hover::after {
+    background-color: #BB0CEA;
+  }
+  
+  table {
+    border-collapse: collapse;
+    z-index: 3;
+  }
+
+  th, td {
+    text-align: left;
+    color: #f2f2f2;
+  }
+
+  th {
+    background-color: black;
+  }
+
+  .details {
+    margin-top: 25px;
+    margin-left: 125px;
+  }
+
+  
+  .heading {
+    font-family: 'M PLUS 1 Code', monospace;
+    font-size: 18px;
+    color: #8F22A1;
+  }
+
